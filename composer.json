@@ -1,0 +1,43 @@
+{
+    "name": "tyhpdef/tightenco-ziggy-impl",
+    "description": "Implementation package for tyhpdef/tightenco-ziggy. Require tyhpdef/tightenco-ziggy, not this package.",
+    "keywords": [
+        "dev",
+        "static analysis",
+        "internal"
+    ],
+    "type": "library",
+    "license": "Apache-2.0",
+    "version": "2.6.4.0",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "tyhp": {
+            "interopContractVersion": 1,
+            "php-version": "8.2",
+            "require": {
+                "tyhpdef/php": "@dev",
+                "tyhpdef/laravel-framework": "@dev"
+            },
+            "package": {
+                "include": [
+                    "./_tyhpdef/*.tyhpdef",
+                    "./_tyhpdef/extensions/*.tyhpdef"
+                ],
+                "overlay": [
+                    "./_tyhpdef/overlays/stubs/*.tyhpdef",
+                    "./_tyhpdef/overlays/*.tyhpdef"
+                ]
+            },
+            "public": "tyhpdef/tightenco-ziggy"
+        }
+    },
+    "require": {
+        "php": ">=8.2",
+        "tightenco/ziggy": "2.6.4"
+    },
+    "require-dev": {
+        "tyhpdef/php": "@dev",
+        "tyhpdef/laravel-framework": "@dev"
+    }
+}
